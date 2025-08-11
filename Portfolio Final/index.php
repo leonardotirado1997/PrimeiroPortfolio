@@ -40,7 +40,8 @@
 
             <div class="social-media">
                 <a href="https://github.com/leonardotirado1997" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/leonardo-pires-tirado-697377210/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.linkedin.com/in/leonardo-pires-tirado-697377210/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
                 <a href="https://www.youtube.com/@leopires1997" target="_blank"><i class='bx bxl-youtube'></i></a>
             </div>
             <div>
@@ -61,7 +62,7 @@
         <div class="services-container">
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
-                <h3>Progamação Web</h3>
+                <h3>Programação Web</h3>
 
                 <p> Programador Web com experiência em HTML para estruturação de páginas, CSS para estilização e
                     JavaScript para interatividade.
@@ -179,8 +180,10 @@
             <div class="portfolio-layer">
                 <h4>Locadora de Veículos</h4>
 
-                <p> Desenvolvi um sistema de programação para uma locadora de carros, que automatiza o gerenciamento de reservas, veículos e clientes.
-                    O sistema permite que os administradores controlem a disponibilidade dos carros, façam o cadastro de novos veículos e clientes,
+                <p> Desenvolvi um sistema de programação para uma locadora de carros, que automatiza o gerenciamento de
+                    reservas, veículos e clientes.
+                    O sistema permite que os administradores controlem a disponibilidade dos carros, façam o cadastro de
+                    novos veículos e clientes,
                     além de gerenciar o processo de locação e devolução de maneira eficiente.
                 </p>
                 <a href="#"><i class='bx bxs-car'></i></a>
@@ -248,7 +251,7 @@
     </section>
     <!-- /Sobre -->
     <footer>
-        <p>Copyright &copy; 2024 by &lt;/Leonardo Tirado&gt;. Todos os direitos Reservados.</p>
+        <p>Copyright &copy; 2025 by &lt;/Leonardo Tirado&gt;. Todos os direitos Reservados.</p>
     </footer>
 </body>
 
