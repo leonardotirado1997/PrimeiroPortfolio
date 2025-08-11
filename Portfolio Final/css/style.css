@@ -1,0 +1,351 @@
+/* Importação da fonte SUSE do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+                                                /*BEM VINDO AO CODIGO CSS DO MEU PORTFOLIO, AQUI ESTA COMENTADO E EXPLICADO CADA CODIGO QUE USEI,
+                                                OBRIGADO E DEUS ABENÇOE!*/
+
+/*CORES QUE USO PARA ESSE PORTFOLIO*/
+:root {
+    --main-color: #088a3e; /* Cor principal */
+    --text-color: #ffffff; /* Cor do texto */
+    --bg-color-01: #141313; /* Cor de fundo primária */
+    --bg-color-02: #171a20; /* Cor de fundo secundária */
+    
+
+    /* Cores adicionais */
+    --color-01: #999999; /* Cor de destaque 1 */
+    --color-02: #009539; /* Cor de destaque 2 */
+    --color-03: #7950f2; /* Cor de destaque 3 */
+    --color-04: #c00000; /* Cor de destaque 4 */
+    --color-05: #232323; /* Cor de destaque 5 */
+}
+
+* { /*SELEÇÃO UNIVERSAL*/
+    margin: 0; /* Remove a margem de todos os elementos */
+    padding: 0; /* Remove espaçamento de todos os elementos */
+    box-sizing: border-box; /* Inclui borda e padding no tamanho total dos elementos */
+    text-decoration: none; /* Remove o sublinhado de links */
+    border: none; /* Remove bordas de todos os elementos */
+    outline: none; /* Remove contornos ao focar nos elementos */
+    scroll-behavior: smooth; /* Suaviza o comportamento de rolagem */
+}
+
+html {
+  font-family: "SUSE", sans-serif; /* Define a fonte SUSE do Google Fonts para o HTML */
+  font-size: 16px; /* Define o tamanho da fonte padrão */
+}
+
+body {
+    background-color: var(--bg-color-01); /* Define a cor de fundo do corpo */
+    color: var(--text-color); /* Define a cor do texto */
+}
+
+header { /*CABEÇALHO*/
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    top: 0; /* Alinha o cabeçalho ao topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Define o cabeçalho para ocupar toda a largura */
+    padding: 1.1rem; /* Adiciona padding ao redor do cabeçalho */
+    background-color: var(--bg-color-02); /* Define a cor de fundo do cabeçalho */
+    display: flex; /* Usa flexbox para o layout dos itens no cabeçalho (responsivo e flexivel) */
+    justify-content: space-between; /* Espaçamento dos itens no cabeçalho igual */
+    align-items: center; /* Alinha os itens do cabeçalho ao centro */
+    z-index: 100; /* Garante que o cabeçalho fique sobre outros elementos */
+
+    border: solid 1px var(--main-color); /* Adiciona borda ao cabeçalho */
+}
+.logo { /*PORTFOLIO LOGO NO CABEÇALHO*/
+    font-size: 1.7rem; /* Tamanho da fonte */
+    color: var(--text-color); /* Cor do texto */
+    font-weight: 600; /* Peso da fonte */
+    cursor: default; /* Muda o cursor para o padrão (não clicável) */
+}
+
+.nav a { /*LETRAS NO CABEÇALHO*/
+    font-size: 1.2rem; /* Tamanho da fonte dos links de navegação */
+    color: var(--text-color); /* Cores dos links  */
+    padding: 0.5rem 1rem; /* Espaçamento interno dos links de navegação */
+    transition: 0.4s; /* Duração da transição para efeitos visuais */
+    border: solid 1px var(--bg-color-02); /* Adiciona uma borda sólida aos links de navegação */
+}
+
+.nav a:hover { /* HOVER É O EFEITO AO PASSAR O MOUSE NAS LETRAS DO CABEÇALHO */
+    color: var(--main-color); /* Cores dos links de navegação ao passar o mouse */
+}
+
+section { /* SESSOES */
+    min-height: 100vh; /* Define a altura mínima da seção como 100% da altura da viewport (janela de visu) */
+    padding: 6rem 6rem 2rem; /* Define o espaçamento interno da seção */
+    border: solid 1px var(--bg-color-02); /* Adiciona uma borda sólida à seção */
+}
+
+span { /*MARCAÇÃO DE TEXTO*/
+    color: var(--main-color); /* Cor do texto dentro de elementos span */
+}
+
+.home, .about {  /* ARRUMANDO O INICIO E O SOBRE PARA FICAR CENTRALIZADOS */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    justify-content: space-evenly; /* Distribui espaço igual entre itens */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+}
+
+.about-content {
+    position: relative; /* Define o container como relativo para posicionamento absoluto dos elementos filhos */
+    padding: 20px; /*Espaçamento*/
+}
+
+
+.home-img { /*PRIMEIRA IMG*/
+    width: 350px; /* Define a largura da imagem da home */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.about-img { /*ULTIMA IMG*/
+    width: 350px; /* Define a largura da imagem da about */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.home-img img, .about-img img { /*ESTILIZAÇÃO DAS IMGS*/
+    border-right: solid 0.1rem var(--main-color); /* Borda direita da imagem com a cor principal */
+    border-bottom: solid 0.1rem var(--main-color); /* Borda inferior da imagem com a cor principal */
+    border-left: solid 0.1rem var(--main-color); /* Borda esquerda da imagem com a cor principal */
+    border-top: solid 0.1rem var(--main-color); /* Borda superior da imagem com a cor principal */
+    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)1); /* Gradiente na borda da imagem */
+}
+
+.home-img img, .about-img img {
+    width: 100%; /* Imagem ocupa toda a largura do container */
+}
+
+.about { /*SESSAO SOBRE*/
+    position: relative; /* Define o container como relativo para posicionamento absoluto dos elementos filhos */
+    padding: 20px; /* Adiciona espaçamento interno de 20 pixels ao redor do conteúdo */
+    background-color: var(--bg-color-02); /* Define a cor de fundo da seção about */
+}
+
+.bible-verse { /*DEIXANDO O TEXTO BIBLICO NA PARTE INFERIOR E ESTILIZAÇÃO*/
+    position: absolute; /* Posiciona o elemento em relação ao seu container PAI */
+    bottom: 20px; /* Alinha o elemento 20 pixels acima da parte inferior do container */
+    right: 20px; /* Alinha o elemento 20 pixels a esquerda da borda direita do container */
+    background-color: var(--bg-color-02); /* Define a cor de fundo */
+    padding: 10px; /* Adiciona espaçamento interno de 10 pixels ao redor do texto */
+    border-radius: 5px; /* Arredonda os cantos do elemento com um raio de 5 pixels */
+    font-size: 14px; /* Define o tamanho da fonte do texto dentro do elemento */
+}
+
+.home-content, .about-content { /*LARGURA*/
+    width: 45%; /* Define a largura dos containers de conteúdo da home e about */
+}
+
+.home-content h1, .about-content h1 { /*ESTILIZANDO O H1*/
+    font-weight: 700; /* Define o peso da fonte dos títulos h1 */
+    line-height: 1.3; /* Define a altura da linha dos títulos h1 */
+    font-size: 2.7rem; /* Define o tamanho da fonte dos títulos h1 */
+}
+
+.home-content h3, .about-content h3 { /*ESTILIZANDO O H3*/
+    font-weight: 700; /* Define o peso da fonte dos títulos h3 */
+    font-size: 1.6rem; /* Define o tamanho da fonte dos títulos h3 */
+}
+
+.home-content p , .about-content p { /*ESTILIZANDO O TEXTO*/
+    margin-top: 1.2rem; /* Define a margem superior dos parágrafos */
+    text-align: justify; /* Alinha o texto dos parágrafos de forma justificada */
+}
+
+.services h2, 
+.portfolio h2,
+.contact h2 { /* DEFININDO O TITULO DOS SERVIÇOS */
+    font-size: 2.2rem; /* Define o tamanho da fonte dos títulos h2 em diferentes seções */
+    margin-bottom: 1rem; /* Define a margem inferior dos títulos h2 */
+    text-align: center; /* Alinha o texto dos títulos h2 ao centro */
+}
+
+.services-container { /*DEFININDO O LAYOUT DAS DIVS */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    justify-content: space-evenly; /* Distribui espaço igual entre itens */
+}
+
+.services-box { /*ALINHAMENTO DOS BOTÕES EM CADA QUADRADO DOS SERVIÇOS*/
+    display: flex; /* Usa Flexbox para layout interno */
+    flex-direction: column; /* Alinha itens na coluna */
+    justify-content: space-between; /* Distribui espaço igual entre itens */
+    min-height: 25rem; /* Define a altura mínima do box */
+    margin-bottom: 1rem; /* Define a margem inferior do box */
+}
+
+.services-container .services-box { /*ALINHAMENTO DOS TEXTOS*/
+    padding: 2rem 1rem 2.5rem; /* Define o espaçamento interno do box */
+    border-radius: 1.2rem; /* Arredonda os cantos do box */
+    text-align: center; /* Alinha o texto ao centro */
+    border: solid 0.15rem var(--bg-color-01); /* Adiciona uma borda sólida ao box */
+    background-color: var(--bg-color-02); /* Define a cor de fundo do box */
+    transition: 0.5s ease; /* Define a duração da transição para efeitos visuais */
+}
+
+.services-container .services-box:hover { /*ESTILIZAÇÃO DAS BORDAS*/
+    border-color: var(--main-color); /* Muda a cor da borda ao passar o mouse */
+    transform: scale(1.01); /* Aumenta ligeiramente o tamanho do box ao passar o mouse */
+}
+
+.services-box i { /*ESTILIZAÇÃO ICONE*/
+    font-size: 4.3rem; /* Define o tamanho do ícone */
+    color: var(--main-color); /* Define a cor do ícone */
+}
+
+.services-box h3 { /*ESTILIZAÇÃO DO TITULO DENTRO DOS SERVIÇOS*/
+    font-size: 1.5rem; /* Define o tamanho da fonte dos títulos h3 */
+}
+
+.services-box p { /*ESTILIZAÇÃO DO TEXTO DOS SERVIÇOS*/
+    margin: 0.5rem; /* Margem dos parágrafos */
+    letter-spacing: 0.1rem; /* Define o espaçamento entre letras */
+}
+
+.portfolio { /*COR DE FUNDO DA SESSAO PORTFOLIO*/
+    background-color: var(--bg-color-02); /* Cor de fundo da seção portfolio */
+}
+
+.portfolio-container {
+    display: grid; /* Usa Grid Layout para o container */
+    gap: 1.2rem; /* Espaçamento entre os itens da grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Define as colunas da grid com tamanho mínimo e máximo */
+}
+
+.portfolio-box { /*EFEITO E SOMBRA ESCONDIDO ATRAS DAS IMGS*/
+    position: relative; /* Permite posicionamento absoluto dentro do box */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o box */
+    border-radius: 8px; /* Arredonda os cantos do box */
+    box-shadow: 0 4px 8px var(--color-02); /* Adiciona uma sombra ao box */
+    transition: transform 0.3s ease; /* Define a transição para o efeito de transformação */
+    margin: 0.5rem; /* Pequena margem ao redor do item para criar espaço */
+}
+
+.portfolio-box:hover { /*EFEITO DE HOVER E IMGS */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do box ao passar o mouse */
+}
+
+.portfolio-box img { /*TAMANHO DAS IMGS*/
+    width: 100%; /* Define a largura da imagem para preencher o box */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Define a altura máxima da imagem */
+    object-fit: cover; /* Faz com que a imagem cubra o box sem distorcer */
+    aspect-ratio: 2 / 4; /* Define a proporção da imagem */
+}
+
+.portfolio-box .portfolio-layer { /*ESTILIZAÇÃO DOS EFEITOS (CAIXA E CAMADA) */
+    position: absolute; /* Posiciona o layer dentro do box */
+    bottom: 0; /* Alinha o layer à parte inferior do box */
+    left: 0; /* Alinha o layer à parte esquerda do box */
+    width: 100%; /* Ocupa toda a largura do box */
+    height: 100%; /* Ocupa toda a altura do box */
+    background: linear-gradient(transparent, var(--main-color)); /* Gradiente de fundo do layer */
+    display: flex; /* Usa Flexbox para layout interno */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    flex-direction: column; /* Alinha itens em coluna */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0 4rem; /* Adiciona espaçamento interno horizontal */
+    transform: translateY(30rem); /* Move o layer para fora do box inicialmente */
+    transition: 0.5s ease; /* Define a duração da transição para o efeito de subida */
+}
+
+.portfolio-box:hover .portfolio-layer { /*EFEITO AO PASSAR O MOUSE*/
+    transform: translateY(0); /* Move o layer para sua posição original ao passar o mouse */
+}
+
+.portfolio-layer h4 { /*TEXTO TITULO*/
+    font-size: 1.8rem; /* Define o tamanho da fonte para os títulos h4 no layer */
+}
+
+.portfolio-layer p { /*TEXTO DE PARAGRAFO*/
+    margin: 0.2rem 0 0.5rem; /* Define a margem dos parágrafos no layer */
+}
+
+.portfolio-layer a { /*CAMADA DA ANCORA*/
+    display: inline-flex; /* Usa Flexbox para o link */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    width: 3rem; /* Define a largura do link */
+    height: 3rem; /* Define a altura do link */
+    background: var(--text-color); /* Define a cor de fundo do link */
+    border-radius: 50%; /* Arredonda o link em um círculo */
+}
+
+.portfolio-layer a i { /*CORES DO INCONES*/
+    color: var(--bg-color-02); /* Define a cor dos ícones */
+}
+
+form { /*CAIXA DE TEXTO PARA BD*/
+    max-width: 45rem; /* Define a largura máxima do formulário */
+    margin: 0.6rem auto; /* Margem superior e inferior de 0.6rem e centraliza o formulário horizontalmente */
+    text-align: center; /* Alinha o texto dentro do formulário ao centro */
+    margin-bottom: 2rem; /* Define a margem inferior do formulário */
+}
+
+form .input-box input, form textarea, form button { /*ESTILO DA CAIXA DE TEXTO*/
+    width: 100%; /* Faz com que os inputs e textarea ocupem toda a largura disponível */
+    padding: 1rem; /* Define o espaçamento interno */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    color: var(--text-color); /* Define a cor do texto */
+    background-color: var(--bg-color-02); /* Define a cor de fundo */
+    border-radius: 0.5rem; /* Arredonda os cantos dos inputs e textarea */
+    margin: 0.4rem 0; /* Define a margem superior e inferior */
+}
+
+form textarea { /*DESATIVAÇÃO DE AUMENTAR O TEXTAREA*/
+    resize: none; /* Desativa a opção de redimensionar o textarea */
+}
+
+footer { /*DEIXA O FOOTER CENTRALIZADO E ALINHADO*/
+    display: flex; /* Usa Flexbox para o layout interno */
+    flex-direction: row; /* Alinha itens na horizontal */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 1.2rem; /* Define o espaçamento interno */
+    background-color: var(--bg-color-01); /* Define a cor de fundo do rodapé */
+}
+
+.social-media a { /*ESTILIZAÇÃO DOS ICONES AO LONGO DA TELA*/
+    display: inline-flex; /* Usa Flexbox para alinhar o conteúdo do link */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    width: 2.5rem; /* Define a largura do link */
+    height: 2.5rem; /* Define a altura do link */
+    background: transparent; /* Define o fundo como transparente */
+    border: solid 0.15rem var(--main-color); /* Adiciona uma borda sólida ao link */
+    border-radius: 50%; /* Arredonda o link em um círculo */
+    font-size: 2rem; /* Define o tamanho da fonte dentro do link */
+    color: var(--main-color); /* Define a cor do texto do link */
+    margin: 1.8rem 0.5rem; /* Define a margem ao redor do link */
+    transition: 0.5s ease; /* Define a duração da transição para efeitos visuais */
+}
+
+.social-media a:hover { /*SOMBRA AO PASSAR IMG*/
+    background-color: var(--main-color); /* Muda a cor de fundo ao passar o mouse */
+    color: var(--bg-color-02); /* Muda a cor do texto ao passar o mouse sem deixar que o que tem no icone suma */
+    box-shadow: 0 0 0.3rem var(--main-color); /* Adiciona uma sombra ao redor do link ao passar o mouse */
+}
+
+.btn { /*ESTILIZAÇÃO DOS BOTOES*/
+    display: inline-block; /* Exibe o botão como um bloco inline */
+    padding: 0.7rem 1.8rem; /* Define o espaçamento interno do botão */
+    background-color: var(--main-color); /* Define a cor de fundo do botão */
+    border-radius: 2rem; /* Arredonda os cantos do botão */
+    color: var(--bg-color-02); /* Define a cor do texto do botão */
+    font-weight: 600; /* Define o peso da fonte do botão */
+    letter-spacing: 0.1rem; /* Define o espaçamento entre letras */
+    transition: 0.3s ease; /* Define a duração da transição para efeitos visuais */
+    margin-top: 1.2rem; /* Define a margem superior do botão */
+}
+
+.btn:hover { /*SOMBRA AO PASSAR NO BOTAO*/
+    box-shadow: 0 0 0.3rem var(--main-color); /* Adiciona uma sombra ao redor do botão ao passar o mouse */
+    background-color: var(--text-color); /* Usa a cor de fundo do elemento pai ao passar o mouse */
+    color: var(--main-color); /* Muda a cor do texto ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse */
+}
+
+
